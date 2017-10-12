@@ -1,0 +1,41 @@
+{
+  "name": "mapbox-experiments",
+  "version": "0.0.1",
+  "description": "Trying to make a GeoJSON polygon shape in mapbox with clicking around",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test",
+    "clean": "rimraf build/ && rimraf dev/",
+    "start": "NODE_ENV=development node utils/webserver.js"
+  },
+  "keywords": [
+    "mapbox",
+    "geo",
+    "geojson",
+    "polygon",
+    "interactive"
+  ],
+  "author": "Nicole Chung",
+  "license": "MIT",
+  "dependencies": {
+    "@mapbox/geojson-area": "^0.2.2",
+    "@mapbox/mapbox-gl-draw": "^1.0.2",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-react": "^6.24.1",
+    "fs": "0.0.1-security",
+    "html-loader": "^0.5.1",
+    "html-webpack-plugin": "^2.30.1",
+    "jsonlint-lines": "^1.7.1",
+    "mapbox-gl": "^0.40.1",
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-mapbox-gl": "^2.7.0",
+    "rimraf": "^2.6.2"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.6.0"
+  }
+}
