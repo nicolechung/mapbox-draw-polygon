@@ -4,7 +4,7 @@ import ReactMapboxGl, { Layer, Feature } from "react-mapbox-gl"
 import DrawControl from 'react-mapbox-gl-draw'
 
 // Don't forget to import the CSS
-import '@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css'
+// import '@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css'
 
 import * as types from './constants'
 

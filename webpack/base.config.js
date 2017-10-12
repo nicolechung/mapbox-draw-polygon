@@ -31,7 +31,7 @@ const options = params => ({
   },
   resolve: {
     alias: alias,
-    extensions: ['.js']
+    extensions: ['.js', '.json']
   },
   module: {
     rules: [
@@ -51,15 +51,21 @@ const options = params => ({
             }
           ]),
       {
-        test: /\.css$/,
-        loader: 'style-loader!css-loader',
+        test: /\.s?css$/,
         exclude: /node_modules/,
-        modules: true,
-        options: {
-          includePaths: [
-            path.join(__dirname, '../src/')
-          ]
-        }
+        use: [
+          {
+            loader: require.resolve('style-loader')
+          },
+          {
+            loader: require.resolve('css-loader'),
+            options: {
+              importLoaders: 1,
+              modules: true,
+              localIdentName: '[path][name]__[local]_[hash:base64:5]'
+            }
+          }
+        ]
       },
       {
         test: new RegExp('(' + fileExtensions.join('|') + ')$'),

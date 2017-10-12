@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Map from 'components/map'
-import * as style from 'components/style.css'
+import style from 'components/style.css'
+
 class App extends Component {
   render () {
     return (
