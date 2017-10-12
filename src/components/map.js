@@ -23,7 +23,6 @@ class MapExample extends React.Component {
   render() {
     return (<Map
       style="mapbox://styles/mapbox/streets-v9"
-      onClick={this.handleMapClick}
       containerStyle={{
         height: "100vh",
         width: "100vw"
